@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Itim', cursive;
+}
+
+#timer {
+    font-size: 72px;
+  }
+  
+body {
+    cursor: wait;
+    animation-name: grayBlink;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.blink{
+    color: black;
+    animation-name: whiteBlink;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes whiteBlink{
+    from{
+        color: black;
+    }
+
+    50%{
+        color: rgba(0, 0, 0, 0);
+    }
+
+    to{
+        color: black;
+    }
+}
+
+@keyframes grayBlink{
+    from{
+        background-color: white;
+    }
+
+    50%{
+        background-color: gray;
+    }
+
+    to{
+        background-color: white;
+    }
+}
